@@ -18,7 +18,11 @@ return new class () extends Migration {
             $table->date('death_date')->nullable();
             $table->boolean('is_vaccinated');
             $table->boolean('is_adoption_available');
-            $table->foreignId('shelter_id')->constrained('shelters');
+            $table->unsignedBigInteger('shelter_id');
+            $table->foreign('shelter_id')
+                ->references('id')
+                ->on('shelters')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

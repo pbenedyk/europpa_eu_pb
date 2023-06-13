@@ -18,7 +18,11 @@ return new class () extends Migration {
             $table->string('phone');
             $table->string('position');
             $table->string('hire_date');
-            $table->foreignId('shelter_id')->constrained('shelters');
+            $table->unsignedBigInteger('shelter_id');
+            $table->foreign('shelter_id')
+                ->references('id')
+                ->on('shelters')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
