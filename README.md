@@ -19,7 +19,7 @@ You can test API: https://europpa.piotrbenedyk.pl
 - **GET /api/shelters**: Retrieve a list of all shelters.
 - **POST /api/shelters**: Create a new shelter.
 - **GET /api/shelters/{id}**: Retrieve a specific shelter by ID.
-- **PUT /api/shelters/{id}**: Update a specific shelter by ID.
+- **PATCH /api/shelters/{id}**: Update a specific shelter by ID.
 - **DELETE /api/shelters/{id}**: Delete a specific shelter by ID.
 
 ### Cats
@@ -27,7 +27,7 @@ You can test API: https://europpa.piotrbenedyk.pl
 - **GET /api/cats**: Retrieve a list of all cats.
 - **POST /api/cats**: Create a new cat.
 - **GET /api/cats/{id}**: Retrieve a specific cat by ID.
-- **PUT /api/cats/{id}**: Update a specific cat by ID.
+- **PATCH /api/cats/{id}**: Update a specific cat by ID.
 - **DELETE /api/cats/{id}**: Delete a specific cat by ID.
 
 ### Employees
@@ -35,7 +35,7 @@ You can test API: https://europpa.piotrbenedyk.pl
 - **GET /api/employees**: Retrieve a list of all employees.
 - **POST /api/employees**: Create a new employee.
 - **GET /api/employees/{id}**: Retrieve a specific employee by ID.
-- **PUT /api/employees/{id}**: Update a specific employee by ID.
+- **PATCH /api/employees/{id}**: Update a specific employee by ID.
 - **DELETE /api/employees/{id}**: Delete a specific employee by ID.
 
 
