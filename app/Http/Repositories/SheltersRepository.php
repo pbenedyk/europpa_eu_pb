@@ -1,7 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Repositories;
+
 use App\Models\Shelter;
+
 class SheltersRepository implements SheltersRepositoryInterface
 {
     public function all()
@@ -28,5 +32,4 @@ class SheltersRepository implements SheltersRepositoryInterface
     {
         return Shelter::create($data);
     }
-
 }

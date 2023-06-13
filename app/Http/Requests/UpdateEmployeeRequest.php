@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Requests;
 
 use App\Http\Traits\FailedApiValidationTrait;
@@ -8,6 +10,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class UpdateEmployeeRequest extends FormRequest
 {
     use FailedApiValidationTrait;
+
     public function rules(): array
     {
         return [

@@ -1,17 +1,21 @@
 <?php
+
 declare(strict_types=1);
+
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
 use App\Http\Repositories\EmployeesRepositoryInterface;
+
 class EmployeesController extends Controller
 {
     public function __construct(
         private readonly EmployeesRepositoryInterface $employeesRepository
     ) {
     }
+
     public function index()
     {
         return response()->json($this->employeesRepository->all());
@@ -37,7 +41,7 @@ class EmployeesController extends Controller
 
     public function update(UpdateEmployeeRequest $request, string $id)
     {
-        if(!$this->employeesRepository->update($id, $request->all())){
+        if (!$this->employeesRepository->update($id, $request->all())) {
             return response()->json(['message' => 'Employee not updated'], 500);
         }
 
@@ -46,7 +50,7 @@ class EmployeesController extends Controller
 
     public function destroy(string $id)
     {
-        if(!$this->employeesRepository->delete($id)){
+        if (!$this->employeesRepository->delete($id)) {
             return response()->json(['message' => 'Employee not deleted'], 500);
         }
 

@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Http\Controllers\Api\SheltersController;
 use App\Http\Repositories\CatsRepository;
 use App\Http\Repositories\CatsRepositoryInterface;
 use App\Http\Repositories\EmployeesRepository;
@@ -32,6 +31,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+
     }
 }

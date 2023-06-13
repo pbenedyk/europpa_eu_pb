@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Repositories;
 
 use App\Models\Cat;
+
 class CatsRepository implements CatsRepositoryInterface
 {
     public function all()

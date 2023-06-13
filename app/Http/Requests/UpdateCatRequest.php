@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Requests;
 
 use App\Http\Traits\FailedApiValidationTrait;
@@ -8,10 +10,10 @@ use Illuminate\Foundation\Http\FormRequest;
 class UpdateCatRequest extends FormRequest
 {
     use FailedApiValidationTrait;
+
     public function rules(): array
     {
         return [
-            'cat' => 'exists:cats,id',
             'name' => 'sometimes|string|max:255',
             'breed' => 'sometimes|string|max:255',
             'birth_date' => 'sometimes|date',

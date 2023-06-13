@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
@@ -11,9 +13,9 @@ class CatsController extends Controller
 {
     public function __construct(
         private readonly CatsRepositoryInterface $catsRepository
-    )
-    {
+    ) {
     }
+
     public function index()
     {
         return response()->json($this->catsRepository->all());
@@ -39,7 +41,7 @@ class CatsController extends Controller
 
     public function update(UpdateCatRequest $request, string $id)
     {
-        if(!$this->catsRepository->update($id, $request->all())){
+        if (!$this->catsRepository->update($id, $request->all())) {
             return response()->json(['message' => 'Cat not updated'], 500);
         }
 
