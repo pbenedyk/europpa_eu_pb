@@ -2,7 +2,7 @@
 
 This repository contains a simple Laravel API for managing shelters, cats, and employees.
 ## TEST API here: 
-You can test API: https://europpa_eu.piotrbenedyk.pl
+You can test API: https://europpa.piotrbenedyk.pl
 
 ## Installation
 
